@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application Form</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Fredericka+the+Great&family=Great+Vibes&family=Madimi+One&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+
+  
+
+  <div id="cards"> 
+    <div class="submitted-cards">
+      <h2>Submitted Applications</h2>
+      <div id="cardsContainer"></div>
+    </div>
+
+
+    <div class="modal-content hidden" id="modal">
+      <span class="close-button" id="closeButton">&times;</span>
+      <div id="modalDetails"></div>
+    </div>
+  </div>
+
+  <div class="form-container">
+    <h1>Job Application Form</h1>
+   
+   
+    <div class="progress-bar">
+      <div class="step-indicator step-indicator-active" id="step-indicator-1">1</div>
+      <div class="step-indicator" id="step-indicator-2">2</div>
+      <div class="step-indicator" id="step-indicator-3">3</div>
+    </div>
+    <form id="jobApplicationForm">
+      <div class="form-step form-step-active" id="step-1">
+        <h2>Step 1: Personal Information</h2>
+        <div class="form-row " id="name" style="display: flex;">
+
+          <div class="form-group col-md-6 ">
+            <label for="firstname ml-4" style="width: 23%;">FirstName:</label>
+            <input type="text" id="firstname" name="firstname" required>
+          </div>
+          <div class="form-group col-md-6" >
+            <label for="lastname ml-4" style="width: 23%;">LastName:</label>
+            <input type="text" id="lastname" name="lastname" required>
+          </div>
+
+
+
+        </div>
+
+        <div class="form-row ">
+          <label for="email">Email:&nbsp;&nbsp;&nbsp;&nbsp;&emsp;</label>
+          <input type="email" id="email" name="email" class="col-6" required>
+        </div>
+        <div class="form-row ">
+          <label for="phone">Phone:&nbsp;&nbsp;&emsp;</label>
+          <input type="tel" id="phone" name="phone" class="col-6" required>
+        </div>
+        <div class="form-row ">
+          <label for="address">Address:&emsp;</label>
+          <input type="text" id="address" name="address" class="col-6" required>
+        </div>
+        <div class="form-row">
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div>
+
+          <div class="form-row " style="display: flex;width: 90%;" id="gender">
+            <label for="gender">Gender:</label>
+            <div class="form-group " id="malediv">
+              <input type="radio" id="male" name="gender" value="male" required>
+              <label for="male">male</label>
+            </div>
+            <div class="form-group" id="femalediv">
+              <input type="radio" name="gender" id="male" value="female" required>
+              <label for="female">female</label>
+
+            </div>
+         
+            
+          </div>
+          <div>
+            <button type="button" class="next-button">Next</button>
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+      <div class="form-step" id="step-2">
+        <h2>Step 2: Job Details</h2>
+        <div>
+          <label for="position">Position:</label>
+          <input type="text" id="position" name="position" class="col-6" required>
+        </div>
+        <div>
+          <label for="company">Previous Company:</label>
+          <input type="text" id="company" name="company" required>
+        </div>
+        <div>
+          <label for="jod">Joining Date:</label>
+          <input type="text" id="jod" name="jod" >
+        </div>
+        <div>
+          <label for="salary">Salary Withdrawn:</label>
+          <input type="text" id="salary" name="salary">
+        </div>
+        <div>
+          <label for="experience">Years of Experience:</label>
+          <input type="number" id="experience" name="experience" required>
+        </div>
+        <div>
+          <button type="button" class="prev-button">Previous</button>
+          <button type="button" class="next-button">Next</button>
+        </div>
+
+      </div>
+
+      <div class="form-step" id="step-3">
+        <h2>Step 3: Job Requirement Questions</h2>
+        <div>
+          <label for="citizen">Are you a citizen of India?</label>
+          <input type="checkbox" id="citizen" name="citizen">
+          <label for="disabled">&emsp;&emsp;Are you disabled?</label>
+          <input type="checkbox" id="disabled" name="disabled">
+        </div>
+        <div>
+          <label for="education1">Highest Education Level:</label>
+          <input type="text" id="education1" name="education1" required>
+        </div>
+        <div>
+          <label for="education2">Institution Name:</label>
+          <input type="text" id="education2" name="education2" required>
+        </div>
+        <div>
+          <label for="education3">Year of Graduation:</label>
+          <input type="number" id="education3" name="education3" required>
+        </div>
+        <div>
+          <button type="button" class="prev-button">Previous</button>
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+
+</html>
